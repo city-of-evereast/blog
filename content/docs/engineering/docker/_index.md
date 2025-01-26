@@ -1,7 +1,7 @@
 ---
-weight: 100
-bookFlatSection: true
-title: "Example Site"
+weight: 10
+bookCollapseSection: true
+title: "Docker"
 ---
 
 # Introduction
