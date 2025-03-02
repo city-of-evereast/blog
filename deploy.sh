@@ -7,6 +7,7 @@ hugo -t hugo-book
 
 cd public
 
+git checkout main
 git add .
 
 msg="rebuilding site `date`"
