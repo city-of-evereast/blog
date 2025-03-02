@@ -2,5 +2,9 @@ baseURL = 'https://city-of-evereast.github.io/'
 languageCode = 'en-us'
 title = "Young's blog"
 theme = "hugo-book"
+enableGitInfo = true
 [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+	BookRepo = 'https://github.com/city-of-evereast/blog'
