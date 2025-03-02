@@ -2,12 +2,16 @@
 
 echo -e "Deploying updates to GitHub"
 
+# make public dir to main branch 
+cd public
+git checkout main
+cd ..
+
 # Build 
 hugo -t hugo-book
 
 cd public
 
-git checkout main
 git add .
 
 msg="rebuilding site `date`"
