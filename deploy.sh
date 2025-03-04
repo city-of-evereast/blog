@@ -27,6 +27,6 @@ cd ../
 
 git add .
 
-git commit -m "$msg"
+git commit -m "$msg, rebuilding site `date`"
 
 git push origin main
