@@ -1,9 +1,9 @@
 ---
-title: Introduction
+title: Young's blog
 type: docs
 ---
 
-# Acerbo datus maxime
+# 일반적인 개발자의 블로그
 
 {{% columns %}}
 ## Astris ipse furtiva
