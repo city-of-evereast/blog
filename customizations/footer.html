@@ -1,0 +1,55 @@
+<div class="flex flex-wrap justify-between">
+
+{{ if and .GitInfo .Site.Params.BookRepo }}
+  <div>
+    {{- $date := partial "docs/date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
+    <a class="flex align-center" href="{{ partial "docs/links/commit" . }}" title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
+      <img src="{{ "svg/calendar.svg" | relURL }}" class="book-icon" alt="" />
+      <span>{{ $date }}</span>
+    </a>
+  </div>
+{{ end }}
+
+{{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
+  <div>
+    <a class="flex align-center" href="{{ partial "docs/links/edit" . }}" target="_blank" rel="noopener">
+      <img src="{{ "svg/edit.svg" | relURL }}" class="book-icon" alt="" />
+      <span>{{ i18n "Edit this page" }}</span>
+    </a>
+  </div>
+{{ end }}
+
+  <div>
+    <a class="flex align-center" target="_blank" rel="noopener">
+      <img src="{{ "svg/view.svg" | relURL }}" class="book-icon" alt="" />
+      <span id=stats></span>
+    </a>
+  </div>
+
+</div>
+
+{{ $script := resources.Get "clipboard.js" | resources.Minify }}
+{{ with $script.Content }}
+  <script>{{ . | safeJS }}</script>
+{{ end }}
+
+<script data-goatcounter="https://city-of-evereast.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<script>
+  function removeTrailingSlash(str) {
+    if (str == '/')
+      return str;
+    else
+      return str.endsWith('/') ? str.slice(0, -1) : str;
+  }
+
+  var r = new XMLHttpRequest();
+  r.addEventListener('load', function() {
+      document.querySelector('#stats').innerText = JSON.parse(this.responseText).count
+  })
+  r.open('GET', 'https://city-of-evereast.goatcounter.com/counter/' + encodeURIComponent(removeTrailingSlash(location.pathname)) + '.json')
+  r.send()
+</script>
+
+
