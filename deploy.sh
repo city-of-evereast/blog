@@ -2,6 +2,8 @@
 
 echo -e "Deploying updates to GitHub"
 
+./customize.sh
+
 # make public dir to main branch 
 cd public
 git checkout main
