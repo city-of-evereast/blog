@@ -1,12 +1,12 @@
 ---
-title: Young's blog
+title: Introduction
 type: docs
 ---
 
 # 일반적인 개발자의 블로그
 
 {{% columns %}}
-## Astris ipse furtiva
+## 테스트 1
 
 Est in vagis et Pittheus tu arge accipiter regia iram vocatur nurus. Omnes ut
 olivae sensit **arma sorori** deducit, inesset **crudus**, ego vetuere aliis,
@@ -14,7 +14,7 @@ modo arsit? Utinam rapta fiducia valuere litora _adicit cursu_, ad facies
 
 <--->
 
-## Suis quot vota
+## 테스트 2
 
 Ea _furtique_ risere fratres edidit terrae magis. Colla tam mihi tenebat:
 miseram excita suadent es pecudes iam. Concilio _quam_ velatus posset ait quod
