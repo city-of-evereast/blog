@@ -19,7 +19,7 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 echo $msg
-git commit -m "$msg"
+git commit -m "$msg, rebuilding site `date`"
 
 git push origin main 
 
@@ -27,6 +27,6 @@ cd ../
 
 git add .
 
-git commit -m "$msg, rebuilding site `date`"
+git commit -m "$msg"
 
 git push origin main
